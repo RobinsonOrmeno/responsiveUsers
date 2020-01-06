@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Responsive Users</title>
+    <title>Responsive User</title>
     <script src="jquery-3.4.1.min.js" type="text/javascript"></script>   
     <script
     src="https://code.jquery.com/jquery-3.4.1.js"
@@ -96,13 +96,28 @@
         let id = $('#id-consulta').val();
         let res = getNombreAsync(id).then(function(resolve){
             $('#nombre').text(resolve.name)
-            let t = $('#tablausuarios').DataTable();
-            t.row.add([
-            resolve.id,
-            resolve.name,
-            resolve.username,
-            resolve['address'].city
-            ]).draw()
+            
+
+            let data = resolve;
+
+
+            // let t = $('#tablausuarios').DataTable();
+            // t.row.add([
+            // resolve.id,
+            // resolve.name,
+            // resolve.username,
+            // resolve['address'].city
+            // ]).draw()
+
+            var myHtmlContent = data
+
+            console.log(myHtmlContent.length)
+            var tableRef = document.getElementById('tablausuarios').getElementsByTagName('tbody')[0];
+
+            var newRow = tableRef.insertRow(tableRef.rows.length);
+            newRow.innerHTML = myHtmlContent.id
+
+
         })
         
         firstAsync().then(
