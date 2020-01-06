@@ -98,24 +98,24 @@
             $('#nombre').text(resolve.name)
             
 
-            let data = resolve;
+            // let data = resolve;
 
 
-            // let t = $('#tablausuarios').DataTable();
-            // t.row.add([
-            // resolve.id,
-            // resolve.name,
-            // resolve.username,
-            // resolve['address'].city
-            // ]).draw()
+            let t = $('#tablausuarios').DataTable();
+            t.row.add([
+             resolve.id,
+             resolve.name,
+             resolve.username,
+             resolve['address'].city
+             ]).draw()
 
-            var myHtmlContent = data
+            // var myHtmlContent = data
 
-            console.log(myHtmlContent.length)
-            var tableRef = document.getElementById('tablausuarios').getElementsByTagName('tbody')[0];
+            // console.log(myHtmlContent.length)
+            // var tableRef = document.getElementById('tablausuarios').getElementsByTagName('tbody')[0];
 
-            var newRow = tableRef.insertRow(tableRef.rows.length);
-            newRow.innerHTML = myHtmlContent.id
+            // var newRow = tableRef.insertRow(tableRef.rows.length);
+            // newRow.innerHTML = myHtmlContent.id
 
 
         })
