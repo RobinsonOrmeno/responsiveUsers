@@ -1,0 +1,162 @@
+
+
+body{
+    background:darkturquoise !important;
+    color: #000 !important;
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.container{
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2,1fr);
+
+    grid-template-areas: "ides usuarios"
+                        "tabla tabla";
+
+}
+
+.container > div ,
+.container .ides,
+.container .user
+.container .tabla {
+    background: #fff;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.ides{
+    grid-area: ides;
+}
+
+.usuarios{
+    grid-area: usuarios;
+}
+.tabla{
+    grid-area: tabla; 
+    
+}
+
+.container .tabla{
+
+    background: deepskyblue;
+}
+.tabla > div ,
+.tabla .tablados {
+    margin: 5%;
+    background: #fff;
+  
+    border-radius: 4px;
+}
+
+@media screen and ( min-width: 930px) and ( max-width: 1024px) {
+    .container{
+        grid-template-areas: "ides ides"
+                             "usuarios usuarios"
+                             "tabla tabla";
+                             
+    }
+
+    .tabla  {
+        margin: 0%;
+        width: 100%;
+        
+    }
+
+}
+
+@media screen and ( min-width: 730px) and ( max-width: 930px) {
+    .container{
+        grid-template-areas: "ides ides"
+                             "usuarios usuarios"
+                             "tabla tabla";
+                             
+    }
+
+    .tabla  {
+        margin: 0%;
+        width: 100%;
+        
+    }
+
+}
+
+
+@media screen and ( min-width: 630px) and ( max-width: 730px) {
+    .container{
+        grid-template-areas: "ides ides"
+                             "usuarios usuarios"
+                             "tabla tabla";
+                             
+    }
+
+    .tabla  {
+        margin: 0%;
+        width: 100%;
+        
+    }
+
+}
+
+@media screen and ( min-width: 430px) and ( max-width: 630px) {
+    .container{
+        grid-template-areas: "ides ides"
+                             "usuarios usuarios"
+                             "tabla tabla";
+                             
+    }
+
+    .tabla  {
+        margin: 0%;
+        width: 100%;
+        
+    }
+
+    .tabla .tablados {
+       
+        background: #fff;
+        border-radius: 4px;
+        max-width: 350;
+    }
+
+}
+
+@media screen and ( min-width: 200px) and ( max-width: 430px){
+    .container{
+        grid-template-areas: "ides ides"
+                             "usuarios usuarios"
+                             "tabla tabla";
+                             
+    }
+
+    .tabla  {
+        margin: 0%;
+        width: 100%;
+        
+    }
+
+    .tabla .tablados {
+       
+        background: #fff;
+        border-radius: 4px;
+        min-width: 140px;
+    }
+
+}
+
+
+
+
+
+.my-custom-scrollbar {
+    
+    height: 150px;
+    overflow: auto;
+    }
+    .table-wrapper-scroll-y {
+    display: grid;
+    }
+
